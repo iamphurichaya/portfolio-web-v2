@@ -1,6 +1,7 @@
 import React from "react";
 import { useActiveSection } from "./useActiveSection";
 import { motion } from "motion/react";
+import { Moon, Sun } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -28,7 +29,7 @@ export function Navbar() {
         <img src="./ren_logo.png" className="h-5 w-auto" />
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-2 relative">
+        <div className="hidden md:flex items-center relative">
           {navItems.map((item, index) => {
             const isActive = activeSection === item.href.slice(1);
             return (
@@ -65,6 +66,10 @@ export function Navbar() {
               </motion.button>
             );
           })}
+
+          <button variant="ghost" className="flex items-center justify-center w-8 h-8 ml-4 bg-primary rounded-full">
+            <Moon className="h-6 w-6 fill-white" />
+          </button>
         </div>
       </div>
     </nav>
