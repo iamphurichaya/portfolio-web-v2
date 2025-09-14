@@ -5,7 +5,7 @@
 :root {
     /*background color*/
     --background: #ffffff;
-    --muted-background: #f0f0f0;
+    --muted-background: #e8e8e8;
 
     --foreground: #2f2f2f;
 
@@ -97,13 +97,15 @@
   overflow: hidden;
   z-index: 1;
   transition: all 0.3s ease-in-out;
-  box-shadow: 4px 6px 10px #bfcad0;
+  box-shadow: 6px 6px 10px #bfcad0,
+               -6px -6px 10px #ffffff;
   cursor: pointer;
 }
 
 .button-custom:hover {
   transform: scale(1.05);
-  box-shadow: 6px 8px 20px #bfcad0;
+  box-shadow: 8px 8px 20px #bfcad0,
+               -8px -8px 20px #ffffff;
 }
 
 .button-custom:active {
@@ -152,10 +154,6 @@
   background-color: var(--background);
 }
 
-.button-soft:hover {
-  background-color: rgba(190, 190, 190, 0.2);
-}
-
 /* Waving Hand 👋 */
 .wave {
   display:inline-block;
@@ -176,3 +174,7 @@
   100% { transform: rotate(0deg); }
 }
 
+.zoom-out {
+  transform: scale(0.95); /* ลดเหลือ 80% */
+  transform-origin: center; /* จุดอ้างอิงการลด */
+}
