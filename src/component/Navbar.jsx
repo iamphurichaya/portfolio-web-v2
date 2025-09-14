@@ -36,7 +36,7 @@ export function Navbar() {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`relative px-2 font-medium text-primary transition-all duration-300 text-sm lg:text-base transform active:translate-y-0 rounded-md menu__link ${
+                className={`relative px-2 font-medium text-primary/80 hover:text-primary transition-all duration-300 text-sm lg:text-base transform active:translate-y-0 rounded-md menu__link ${
                   activeSection === item.href.slice(1) ? "active" : ""
                 }`}
                 initial={{ opacity: 0, y: -10 }}
@@ -60,7 +60,7 @@ export function Navbar() {
                     }}
                   />
                 )}
-                <span className="px-4 inline-block transform transition-transform duration-300 hover:-translate-y-1.5 relative z-10">
+                <span className="font-poppins px-4 inline-block transform transition-transform duration-300 hover:-translate-y-1.5 relative z-10">
                   {item.name}
                 </span>
               </motion.button>

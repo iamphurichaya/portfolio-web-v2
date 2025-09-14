@@ -2,20 +2,27 @@ import React from "react";
 import { ArrowDownToLine } from "lucide-react";
 import { motion } from "motion/react";
 
+const scrollToContact = () => {
+  const element = document.querySelector("#contact");
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen flex px-4 sm:px-6 pt-16 sm:pt-14 items-center justify-center"
+      className="font-poppins min-h-screen flex px-4 sm:px-6 pt-16 sm:pt-14 items-center justify-center"
     >
       <div className="">
         {/* Name */}
-        <hero className="font-bold text-primary">
-          <h1 className="mb-2 text-4xl md:text-5xl lg:text-6xl xl:text-[105px] font-bold">
+        <div className="font-bold text-primary">
+          <h3 className="mb-2 text-4xl md:text-5xl lg:text-6xl xl:text-[105px] font-bold">
             <span class="wave">👋🏻</span> HELLO, I AM
-          </h1>
-          <h2 className="text-9xl font-bold">PHURICHAYA</h2>
-        </hero>
+          </h3>
+          <h4 className="text-9xl font-bold">PHURICHAYA</h4>
+        </div>
 
         {/* Occupation + City */}
         <div className="py-2 text-primary">
@@ -36,14 +43,14 @@ function Home() {
 
         {/* Button */}
         <div className="py-2 flex space-x-8">
-          <button className="button-custom button-primary flex items-center gap-2">
+          <button variant="outline" className="button-custom button-primary flex items-center gap-2">
             <span className="text-2xl">Download CV</span>
             <ArrowDownToLine size={24} color="#ffffff" strokeWidth={2.5}/>
           </button>
-          <button className="button-custom button-muted">
+          <button variant="outline" onClick={scrollToContact} className="button-custom button-muted">
             <span className="text-2xl">Hire Me</span>
           </button>
-          <button className="button-custom button-soft">
+          <button variant="ghost" onClick={() => window.open('https://github.com/iamphurichaya', '_blank')} className="button-custom button-soft">
             <span className="text-2xl">GitHub</span>
           </button>
         </div>
