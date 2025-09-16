@@ -1,15 +1,6 @@
 import React from "react";
 import { Monitor, CodeXml, RefreshCcw } from "lucide-react";
-
-// The Mail icon is a custom SVG component with a reduced size.
-const MailIcon = () => (
-  <svg width="22.8" height="22.8" viewBox="0 0 24 24" className="text-white">
-    <path
-      fill="currentColor"
-      d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7l8-5V6l-8 5l-8-5v2z"
-    />
-  </svg>
-);
+import { MailIcon } from "./Icon.jsx";
 
 const coreSkills = [
   {
@@ -113,7 +104,9 @@ function About() {
             className="button-custom button-primary flex items-center gap-[0.95rem]"
           >
             <span>Hire Me</span>
-            <MailIcon />
+            <div className="text-primary-foreground">
+              <MailIcon />
+            </div>
           </button>
         </div>
         <div className="font-lato grid grid-cols-[1.5fr_2fr] ml-[3.8rem]">
