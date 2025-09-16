@@ -24,7 +24,7 @@
   --color-primary: var(--primary);
   --color-muted-primary: var(--muted-primary);
   --color-soft-primary: var(--soft-primary);
-  --primary-foreground: var(--primary-foreground);
+  --color-primary-foreground: var(--primary-foreground);
 
 }
 
@@ -81,8 +81,21 @@
  height: auto;
  border-radius: 80px;
  background: var(--muted-background);
- box-shadow: 20px 20px 30px #bfcad0,
-               -20px -20px 30px #ffffff;
+ box-shadow: 10px 10px 20px #bfcad0,
+               -10px -10px 20px #ffffff;
+}
+
+.card-skills {
+  position: relative;
+  padding: 12px 50px;
+  background-color: var(--muted-background);
+  border: none;
+  border-radius: 50px;
+  overflow: visible;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 6px 6px 10px #bfcad0,
+               -6px -6px 10px #ffffff;
 }
 
 /* Button */
@@ -174,7 +187,3 @@
   100% { transform: rotate(0deg); }
 }
 
-.zoom-out {
-  transform: scale(0.95); /* ลดเหลือ 80% */
-  transform-origin: center; /* จุดอ้างอิงการลด */
-}
