@@ -27,10 +27,10 @@ function Skills() {
     >
 
       <div className="text-center mb-18">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-3 font-poppins">
+        <h2 className="text-4xl md:text-6xl font-bold text-primary mb-3 font-poppins">
           SKILLS
         </h2>
-        <p className="text-muted-primary text-lg">
+        <p className="text-muted-primary text-xl">
           <b>Hover</b> or <b>click</b> over each skill to see details
         </p>
       </div>
@@ -52,7 +52,7 @@ function Skills() {
                   alt={`${skill.label} logo`}
                   className="w-8 h-8"
                 />
-                <span className="text-primary whitespace-nowrap text-xl">
+                <span className="text-primary whitespace-nowrap text-2xl">
                   {skill.label}
                 </span>
 

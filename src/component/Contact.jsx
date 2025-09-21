@@ -44,13 +44,13 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-background min-h-screen items-center justify-center px-4 p-15 sm:px-6 pt-16 sm:pt-22"
+      className="bg-background min-h-screen items-center justify-center px-4 p-10 sm:px-6 pt-16 sm:pt-30"
     >
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-3 font-poppins">
+        <h2 className="text-4xl md:text-6xl font-bold text-primary mb-3 font-poppins">
           Contact
         </h2>
-        <p className="text-muted-primary text-lg">
+        <p className="text-muted-primary text-xl">
           Looking forward to collaborating and growing with a team. contact me
           below!
         </p>
@@ -58,7 +58,7 @@ const Contact = () => {
       <div className="bg-primary-foreground shadow-lg rounded-3xl border-0 p-8 font-lato max-w-2xl mx-auto">
         <p className="mb-6 font-bold text-xl">Send a Message</p>
         <form ref={formRef} onSubmit={sendEmail}>
-          <label htmlFor="email" className="block text-sm font-medium mb-2">
+          <label htmlFor="email" className="block font-medium mb-2">
             Email
           </label>
           <input
@@ -70,7 +70,7 @@ const Contact = () => {
             placeholder="your.email@example.com"
           />
 
-          <label htmlFor="subject" className="block text-sm font-medium mb-2">
+          <label htmlFor="subject" className="block font-medium mb-2">
             Subject
           </label>
           <input
@@ -82,7 +82,7 @@ const Contact = () => {
             placeholder="subject"
           />
 
-          <label htmlFor="message" className="block text-sm font-medium mb-2">
+          <label htmlFor="message" className="block font-medium mb-2">
             Message
           </label>
           <textarea
@@ -109,7 +109,7 @@ const Contact = () => {
         <div class="gap-8 hover:gap-2 relative flex justify-center items-center text-sm max-w-fit rounded-full duration-300">
           {/* Mail Icon */}
           <div class="group rounded-full">
-            <div class="flex items-center group-hover:gap-2 button-primary p-3 rounded-full cursor-pointer duration-300">
+            <div class="flex items-center group-hover:gap-2 button-primary p-3 rounded-full duration-300">
               <MailIcon />
               <span class="text-[0px] group-hover:text-sm duration-300">
                 work.phurichaya@gmail.com
@@ -119,7 +119,7 @@ const Contact = () => {
 
           {/* Map Icon */}
           <div class="group rounded-full">
-            <div class="flex items-center group-hover:gap-2 button-primary p-3 rounded-full cursor-pointer duration-300">
+            <div class="flex items-center group-hover:gap-2 button-primary p-3 rounded-full duration-300">
               <MapIcon />
               <span class="text-[0px] group-hover:text-sm duration-300">
                 Bangkok, Thailand

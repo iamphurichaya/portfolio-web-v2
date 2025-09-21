@@ -16,7 +16,7 @@ function Education() {
       className="bg-background flex flex-col items-center justify-center py-25 px-4 sm:px-6 lg:px-8"
     >
       <div className="text-center mb-16">
-        <h2 className="font-poppins text-4xl md:text-5xl font-bold text-primary">
+        <h2 className="font-poppins text-4xl md:text-6xl font-bold text-primary pt-8">
           EDUCATION
         </h2>
       </div>
@@ -29,7 +29,7 @@ function Education() {
             className="grid grid-cols-[auto_1fr] md:grid-cols-[1fr_auto_2fr] gap-x-4 md:gap-x-10"
           >
             {/* คอลัมน์ซ้าย (year) - Desktop */}
-            <div className="text-primary hidden md:flex justify-end items-center text-right">
+            <div className="text-primary hidden md:flex justify-end items-center text-right text-lg">
               <p>{edu.year}</p>
             </div>
 
@@ -45,9 +45,9 @@ function Education() {
 
             {/* Detaills */}
             <div className="py-2">
-              <h3 className="font-bold text-xl text-gray-800">{edu.university}</h3>
-              <p className="mt-1 text-gray-700">{edu.degree}</p>
-              <p className="mt-2 text-sm text-gray-500">{edu.details}</p>
+              <h3 className="font-bold text-2xl text-gray-800">{edu.university}</h3>
+              <p className="mt-1 text-xl text-gray-700">{edu.degree}</p>
+              <p className="mt-2 text-lg text-gray-500">{edu.details}</p>
 
               {/* year - Mobile */}
               <p className="mt-2 md:hidden text-sm text-primary">{edu.year}</p>
