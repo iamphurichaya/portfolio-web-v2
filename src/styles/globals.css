@@ -98,6 +98,15 @@
                -6px -6px 10px #ffffff;
 }
 
+.card-projects {
+ width: auto;
+ height: auto;
+ border-radius: 50px;
+ background: var(--background);
+ box-shadow: 6px 6px 10px #bfcad0,
+            -6px -6px 10px #ffffff;
+}
+
 /* Button */
 .button-custom {
   position: relative;
@@ -113,6 +122,10 @@
   box-shadow: 6px 6px 10px #bfcad0,
                -6px -6px 10px #ffffff;
   cursor: pointer;
+}
+
+.button-p {
+  padding: 12px 44px;
 }
 
 .button-custom:hover {
