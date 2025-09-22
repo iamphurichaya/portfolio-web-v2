@@ -13,53 +13,71 @@ function Home() {
   return (
     <section
       id="home"
-      className="font-poppins min-h-screen flex px-4 sm:px-6 pt-16 sm:pt-14 items-center justify-center"
+      className="font-poppins min-h-screen flex flex-col lg:flex-row px-4 sm:px-6 py-16 items-center justify-center gap-y-12 lg:gap-x-20 pt-20 lg:pt-30"
     >
-      <div className="">
+      <div className="order-2 lg:order-1 flex flex-col items-center justify-center lg:items-start lg:justify-start">
         {/* Name */}
-        <div className="font-bold text-primary">
-          <h3 className="mb-2 text-4xl md:text-5xl lg:text-6xl xl:text-[105px] font-bold">
+        <div className="font-bold text-primary flex flex-col items-center justify-center lg:items-start lg:justify-start">
+          <h3 className="mb-2 text-4xl sm:text-6xl md:text-7xl lg:text-[80px] xl:text-[106px] font-bold">
             <span class="wave">👋🏻</span> HELLO, I AM
           </h3>
-          <h4 className="text-9xl font-bold">PHURICHAYA</h4>
+          <h4 className="text-5xl sm:text-7xl md:text-[94px] xl:text-9xl font-bold">
+            PHURICHAYA
+          </h4>
         </div>
 
         {/* Occupation + City */}
-        <div className="py-2 text-primary">
-          <p className="text-[66px] leading-tight text-[#454545]">Front End Developer</p>
-          <p className="text-[48px] leading-tight text-[#5d5d5d]">
+        <div className="py-2 text-primary flex flex-col items-center justify-center lg:items-start lg:justify-start">
+          <p className="text-2xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[66px] leading-tight text-[#454545]">
+            Front End Developer
+          </p>
+          <p className="text-lg sm:text-[26px] md:text-4xl xl:text-5xl leading-tight text-[#5d5d5d]">
             based in Bangkok, Thailand
           </p>
         </div>
 
         {/* Status */}
-        <div className="flex items-center py-4">
-          <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-          <span className="text-2xl font-bold text-muted-primary px-3">
+        <div className="flex items-center justify-center lg:justify-start py-4 w-full">
+          <div className="lg:hidden flex-grow h-[1.5px] bg-soft-primary mr-3 sm:block" />
+          <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+          <span className="text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-muted-primary px-3">
             Open full-time
           </span>
-          <div class="w-[60%] h-[1.5px] bg-soft-primary"></div>
+          <div class=" flex-grow lg:flex-none lg:w-[70%] xl:w-[60%] h-[1.5px] bg-soft-primary" />
         </div>
 
+        
+
         {/* Button */}
-        <div className="py-2 flex space-x-8">
-          <button variant="outline" className="button-custom button-primary flex items-center gap-2">
-            <span className="text-2xl">Download CV</span>
-            <ArrowDownToLine size={24} color="#ffffff" strokeWidth={2.5}/>
+        <div className="py-4 flex flex-wrap gap-4 xl:space-x-4 justify-center lg:justify-start">
+          <button className="button-custom button-primary flex items-center gap-2 px-5 py-2 text-base sm:px-6 sm:py-3 sm:text-lg md:px-7 md:text-lg xl:text-2xl">
+            <span>Download CV</span>
+            <ArrowDownToLine size={24} color="#ffffff" strokeWidth={2.5} />
           </button>
-          <button variant="outline" onClick={scrollToContact} className="button-custom button-muted">
-            <span className="text-2xl">Hire Me</span>
+
+          <button
+            onClick={scrollToContact}
+            className="button-custom button-muted px-5 py-2 text-base sm:px-6 sm:py-3 sm:text-lg md:px-7 md:text-lg xl:text-2xl"
+          >
+            <span>Hire Me</span>
           </button>
-          <button variant="ghost" onClick={() => window.open('https://github.com/iamphurichaya', '_blank')} className="button-custom button-soft">
-            <span className="text-2xl">GitHub</span>
+
+          <button
+            onClick={() =>
+              window.open("https://github.com/iamphurichaya", "_blank")
+            }
+            className="button-custom button-soft px-5 py-2 text-base sm:px-6 sm:py-3 sm:text-lg md:px-7 md:text-lg xl:text-2xl"
+          >
+            <span>GitHub</span>
           </button>
         </div>
       </div>
-      <div className="h-130 ml-20">
+
+      <div className="order-1 lg:order-2">
         <img
           src={"./avatar.png"}
           alt="Profile"
-          className="w-full h-full object-cover"
+          className="w-full h-60 sm:h-80 lg:w-74 lg:h-110 xl:w-full xl:h-130 object-cover"
         />
       </div>
     </section>
