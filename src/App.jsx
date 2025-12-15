@@ -1,28 +1,29 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import './styles/globals.css'
-import Navbar from './component/Navbar';
-import Home from './component/Home';
-import About from './component/About';
-import Projects from './component/Projects';
-import Skills from './component/Skills';
-import Education from './component/Education';
-import Contact from './component/Contact';
+import "./styles/globals.css";
+import Navbar from "./component/Navbar";
+import Home from "./component/Home";
+import About from "./component/About";
+import Projects from "./component/Projects";
+import Skills from "./component/Skills";
+import Education from "./component/Education";
+import Contact from "./component/Contact";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Projects/>
-      <Skills/>
-      <Education/>
-      <Contact/>
+      <Navbar />
+
+      <Home />
+      <About />
+      <Projects />
+      <Skills />
+      <Education />
+      <Contact />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

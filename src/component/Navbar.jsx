@@ -23,7 +23,7 @@ export function Navbar() {
   const activeSection = useActiveSection();
 
   return (
-    <nav className="fixed top-4 left-8 right-8 z-50 rounded-2xl bg-background/50 backdrop-blur-md">
+    <nav className="hidden md:block md:fixed top-4 left-8 right-8 z-50 rounded-2xl bg-background/50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-2">
         {/* LOGO */}
         <img src="./ren_logo.png" className="h-5 w-auto" />

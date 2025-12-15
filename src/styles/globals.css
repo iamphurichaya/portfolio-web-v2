@@ -77,17 +77,29 @@
 
 /* Card */
 .card {
- width: auto;
- height: auto;
- border-radius: 80px;
- background: var(--muted-background);
- box-shadow: 10px 10px 20px #bfcad0,
-               -10px -10px 20px #ffffff;
+  @apply bg-muted-background;
 }
+
+/* lg ขึ้นไป */
+@media (min-width: 0px) {
+  .card {
+    @apply rounded-[50px] bg-muted-background;
+    box-shadow: 5px 5px 10px #bfcad0,
+                -5px -5px 10px #ffffff;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    @apply rounded-[80px] bg-muted-background;
+    box-shadow: 10px 10px 20px #bfcad0,
+                -10px -10px 20px #ffffff;
+  }
+}
+
 
 .card-skills {
   position: relative;
-  padding: 12px 50px;
   background-color: var(--muted-background);
   border: none;
   border-radius: 50px;
@@ -109,76 +121,51 @@
 
 /* Button */
 .button-custom {
-  position: relative;
-  padding: 12px 50px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 50px;
-  overflow: hidden;
-  z-index: 1;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 6px 6px 10px #bfcad0,
-               -6px -6px 10px #ffffff;
-  cursor: pointer;
+  @apply relative font-medium text-black bg-white rounded-[50px] overflow-hidden z-[1] 
+         transition-all duration-300 ease-in-out cursor-pointer;
+  box-shadow: 6px 6px 10px #bfcad0, -6px -6px 10px #ffffff;
 }
 
-.button-p {
-  padding: 12px 44px;
-}
-
+/* hover + active */
 .button-custom:hover {
-  transform: scale(1.05);
-  box-shadow: 8px 8px 20px #bfcad0,
-               -8px -8px 20px #ffffff;
+  @apply scale-105;
+  box-shadow: 8px 8px 20px #bfcad0, -8px -8px 20px #ffffff;
 }
 
 .button-custom:active {
-  transform: scale(0.9);
+  @apply scale-90;
 }
 
+/* pseudo element */
 .button-custom::before {
   content: "";
-  position: absolute;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100%;
-  transition: all 0.85s ease-in-out;
+  @apply absolute top-0 right-[-100%] w-full h-full rounded-[50px] transition-all duration-1000 ease-in-out;
   z-index: -1;
-  border-radius: 50px;
 }
 
 .button-custom:hover::before {
   right: 100%;
 }
 
-/* Button Primary Color */
+/* variations */
 .button-primary {
-  color: var(--primary-foreground);
-  background-color: var(--primary);
+  @apply text-primary-foreground bg-primary;
 }
-
 .button-primary::before {
   background: linear-gradient(to right, #2f2f2f, #505050);
 }
 
-/* Button Muted Color */
 .button-muted {
-  color: var(--primary);
-  background-color: var(--muted-background);
+  @apply text-primary bg-muted-background;
 }
-
 .button-muted:hover {
-  background-color: rgba(0,0,0,0.15);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
-/* Button Soft Color */
 .button-soft {
-  color: var(--primary);
-  background-color: var(--background);
+  @apply text-primary bg-background;
 }
+
 
 /* Waving Hand 👋 */
 .wave {

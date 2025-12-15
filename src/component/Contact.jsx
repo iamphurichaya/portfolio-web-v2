@@ -44,21 +44,21 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-background min-h-screen items-center justify-center px-4 p-10 sm:px-6 pt-16 sm:pt-30"
+      className="bg-background items-center justify-center px-4 p-10 sm:px-6 pt-10 md:pt-26"
     >
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-6xl font-bold text-primary mb-3 font-poppins">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-3 font-poppins">
           Contact
         </h2>
-        <p className="text-muted-primary text-xl">
+        <p className="text-muted-primary text-base md:text-lg lg:text-xl">
           Looking forward to collaborating and growing with a team. contact me
           below!
         </p>
       </div>
       <div className="bg-primary-foreground shadow-lg rounded-3xl border-0 p-8 font-lato max-w-2xl mx-auto">
-        <p className="mb-6 font-bold text-xl">Send a Message</p>
+        <p className="mb-6 font-bold text-lg md:text-xl">Send a Message</p>
         <form ref={formRef} onSubmit={sendEmail}>
-          <label htmlFor="email" className="block font-medium mb-2">
+          <label htmlFor="email" className="block font-medium mb-2 text-sm md:text-base">
             Email
           </label>
           <input
@@ -66,11 +66,11 @@ const Contact = () => {
             name="user_email"
             type="email"
             required
-            className="mb-6 px-3 py-1 w-full bg-muted-background/50 rounded-2xl transition-all duration-300 focus:scale-[1.02] h-11 sm:h-12 text-base"
+            className="text-sm md:text-base mb-6 px-3 py-1 w-full bg-muted-background/50 rounded-2xl transition-all duration-300 focus:scale-[1.02] h-11 sm:h-12"
             placeholder="your.email@example.com"
           />
 
-          <label htmlFor="subject" className="block font-medium mb-2">
+          <label htmlFor="subject" className="block font-medium mb-2 text-sm md:text-base">
             Subject
           </label>
           <input
@@ -78,24 +78,24 @@ const Contact = () => {
             name="user_subject"
             type="subject"
             required
-            className="mb-6 px-3 py-1 w-full bg-muted-background/50 rounded-2xl transition-all duration-300 focus:scale-[1.02] h-11 sm:h-12 text-base"
+            className="text-sm md:text-base mb-6 px-3 py-1 w-full bg-muted-background/50 rounded-2xl transition-all duration-300 focus:scale-[1.02] h-11 sm:h-12"
             placeholder="subject"
           />
 
-          <label htmlFor="message" className="block font-medium mb-2">
+          <label htmlFor="message" className="block font-medium mb-2 text-sm md:text-base">
             Message
           </label>
           <textarea
             id="message"
             name="user_message"
             required
-            className="mb-6 px-3 py-2 w-full bg-muted-background/50 rounded-2xl min-h-[120px] sm:min-h-[140px] transition-all duration-300 focus:scale-[1.02] text-base resize-none"
+            className="text-sm md:text-base mb-6 px-3 py-2 w-full bg-muted-background/50 rounded-2xl min-h-[120px] sm:min-h-[140px] transition-all duration-300 focus:scale-[1.02] resize-none"
             placeholder="tell me about your company..."
           />
 
           <button
             type="submit"
-            className="button-custom button-primary rounded-full flex items-center justify-center w-full transition-all duration-300 h-10 sm:h-10"
+            className="button-custom button-primary text-sm md:text-base rounded-full flex items-center justify-center w-full transition-all duration-300 h-10 sm:h-10"
             size="lg"
           >
             <span className="mr-2">Send Message</span>
@@ -106,22 +106,22 @@ const Contact = () => {
 
       {/* Amimation email + location */}
       <div className="flex justify-center items-center p-8">
-        <div class="gap-8 hover:gap-2 relative flex justify-center items-center text-sm max-w-fit rounded-full duration-300">
+        <div className="gap-8 hover:gap-2 relative flex justify-center items-center text-sm max-w-fit rounded-full duration-300">
           {/* Mail Icon */}
-          <div class="group rounded-full">
-            <div class="flex items-center group-hover:gap-2 button-primary p-3 rounded-full duration-300">
+          <div className="group rounded-full">
+            <div className="flex items-center group-hover:gap-2 button-primary p-3 rounded-full duration-300">
               <MailIcon />
-              <span class="text-[0px] group-hover:text-sm duration-300">
+              <span className="text-[0px] group-hover:text-xs md:group-hover:text-sm duration-300">
                 work.phurichaya@gmail.com
               </span>
             </div>
           </div>
 
           {/* Map Icon */}
-          <div class="group rounded-full">
-            <div class="flex items-center group-hover:gap-2 button-primary p-3 rounded-full duration-300">
+          <div className="group rounded-full">
+            <div className="flex items-center group-hover:gap-2 button-primary p-3 rounded-full duration-300">
               <MapIcon />
-              <span class="text-[0px] group-hover:text-sm duration-300">
+              <span className="text-[0px] group-hover:text-xs md:group-hover:text-sm duration-300">
                 Bangkok, Thailand
               </span>
             </div>
@@ -133,3 +133,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

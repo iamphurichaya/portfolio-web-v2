@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowDownToLine } from "lucide-react";
 import { motion } from "motion/react";
 
+
 const scrollToContact = () => {
   const element = document.querySelector("#contact");
   if (element) {
@@ -13,25 +14,25 @@ function Home() {
   return (
     <section
       id="home"
-      className="font-poppins min-h-screen flex flex-col lg:flex-row px-4 sm:px-6 py-16 items-center justify-center gap-y-12 lg:gap-x-20 pt-20 lg:pt-30"
+      className="font-poppins flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 py-16 gap-y-12 lg:gap-x-20 pt-20 lg:pt-30"
     >
       <div className="order-2 lg:order-1 flex flex-col items-center justify-center lg:items-start lg:justify-start">
         {/* Name */}
         <div className="font-bold text-primary flex flex-col items-center justify-center lg:items-start lg:justify-start">
-          <h3 className="mb-2 text-4xl sm:text-6xl md:text-7xl lg:text-[80px] xl:text-[106px] font-bold">
-            <span class="wave">👋🏻</span> HELLO, I AM
+          <h3 className="mb-2 text-4xl sm:text-5xl lg:text-[80px] xl:text-[106px] font-bold">
+            <span className="wave">👋🏻</span> HELLO, I AM
           </h3>
-          <h4 className="text-5xl sm:text-7xl md:text-[94px] xl:text-9xl font-bold">
+          <h4 className="text-5xl sm:text-6xl lg:text-[98px] xl:text-9xl font-bold">
             PHURICHAYA
           </h4>
         </div>
 
         {/* Occupation + City */}
         <div className="py-2 text-primary flex flex-col items-center justify-center lg:items-start lg:justify-start">
-          <p className="text-2xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[66px] leading-tight text-[#454545]">
+          <p className="text-2xl sm:text-3xl lg:text-[50px] xl:text-[66px] leading-tight text-[#454545]">
             Front End Developer
           </p>
-          <p className="text-lg sm:text-[26px] md:text-4xl xl:text-5xl leading-tight text-[#5d5d5d]">
+          <p className="text-lg sm:text-2xl lg:text-4xl xl:text-5xl leading-tight text-[#5d5d5d]">
             based in Bangkok, Thailand
           </p>
         </div>
@@ -39,25 +40,25 @@ function Home() {
         {/* Status */}
         <div className="flex items-center justify-center lg:justify-start py-4 w-full">
           <div className="lg:hidden flex-grow h-[1.5px] bg-soft-primary mr-3 sm:block" />
-          <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-          <span className="text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-muted-primary px-3">
+          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+          <span className="text-base lg:text-lg xl:text-2xl font-bold text-muted-primary px-3">
             Open full-time
           </span>
-          <div class=" flex-grow lg:flex-none lg:w-[70%] xl:w-[60%] h-[1.5px] bg-soft-primary" />
+          <div className=" flex-grow lg:flex-none lg:w-[70%] xl:w-[60%] h-[1.5px] bg-soft-primary" />
         </div>
-
-        
 
         {/* Button */}
         <div className="py-4 flex flex-wrap gap-4 xl:space-x-4 justify-center lg:justify-start">
-          <button className="button-custom button-primary flex items-center gap-2 px-5 py-2 text-base sm:px-6 sm:py-3 sm:text-lg md:px-7 md:text-lg xl:text-2xl">
+          <a 
+          href="/Phurichaya_Isariyadol.pdf" download
+          className="button-custom button-primary flex items-center gap-2 py-3 px-12 text-base xl:text-2xl">
             <span>Download CV</span>
             <ArrowDownToLine size={24} color="#ffffff" strokeWidth={2.5} />
-          </button>
+          </a>
 
           <button
             onClick={scrollToContact}
-            className="button-custom button-muted px-5 py-2 text-base sm:px-6 sm:py-3 sm:text-lg md:px-7 md:text-lg xl:text-2xl"
+            className="button-custom button-muted py-3 px-12 text-base xl:text-2xl"
           >
             <span>Hire Me</span>
           </button>
@@ -66,7 +67,7 @@ function Home() {
             onClick={() =>
               window.open("https://github.com/iamphurichaya", "_blank")
             }
-            className="button-custom button-soft px-5 py-2 text-base sm:px-6 sm:py-3 sm:text-lg md:px-7 md:text-lg xl:text-2xl"
+            className="button-custom button-soft py-3 px-12 text-base xl:text-2xl"
           >
             <span>GitHub</span>
           </button>
